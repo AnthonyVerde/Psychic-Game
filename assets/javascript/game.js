@@ -34,11 +34,12 @@ document.onkeyup = function (event) {
          losses = 0;
          guessesRemaining = 9;
      }
+// Display the wins/losses/guesses remaining/guesses made.
+ document.getElementById("wins-text").innerHTML = "Wins: " + wins;
+ document.getElementById("losses-text").innerHTML = "Losses: " + losses;
+ document.getElementById("guesses-remain-text").innerHTML = "Guesses remaining: " + guessesRemaining;
+ document.getElementById("guesses-so-far-text").innerHTML = "Guesses so far: " + userGuess;
 
-     winsText.innerHTML = "Wins: " + wins;
-     lossesText.innerHTML = "Losses: " + losses;
-     guessesRemainingText.innerHTML = "Guesses remaining: " + guessesRemaining;
-     guessesSoFarText.innerHTML = "Guesses so far: " + userGuess;
- }
+}
 
 };
