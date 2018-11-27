@@ -1,8 +1,8 @@
- // Creates an array that lists out all possible letters
- var letterChoice = ["a", "b", "c", "d", "e", "f", "g", "h",
- "i", "j", "k", "l", "m", "n", "o", "p",
- "q", "r", "s", "t", "u", "v", "w",
- "x", "y", "z"];
+// Creates an array that lists out all possible letters
+var letterChoice = ["a", "b", "c", "d", "e", "f", "g", "h",
+    "i", "j", "k", "l", "m", "n", "o", "p",
+    "q", "r", "s", "t", "u", "v", "w",
+    "x", "y", "z"];
 
 // Creating variables to hold the number of wins, losses, guesses left, and guesses so far
 var wins = 0;
@@ -19,27 +19,33 @@ var guessesSoFarText = document.getElementById("guesses-so-far-text");
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
 
- var userGuess = event.key;
+    var userGuess = event.key;
 
- var computerGuess = letterChoice[Math.floor(Math.random() * letterChoice.length)];
+    var computerGuess = letterChoice[Math.floor(Math.random() * letterChoice.length)];
+    
 
- if (userGuess === computerGuess) {
-     wins++;
- } else {
-     losses++;
-     guessesRemaining -= 1;
-     if (guessesRemaining == 0) {
-         alert("You lose");
-         wins = 0;
-         losses = 0;
-         guessesRemaining = 9;
-     }
-// Display the wins/losses/guesses remaining/guesses made.
- document.getElementById("wins-text").innerHTML = "Wins: " + wins;
- document.getElementById("losses-text").innerHTML = "Losses: " + losses;
- document.getElementById("guesses-remain-text").innerHTML = "Guesses remaining: " + guessesRemaining;
- document.getElementById("guesses-so-far-text").innerHTML = "Guesses so far: " + userGuess;
 
-}
+    if (userGuess === computerGuess) {
+        wins++;
+
+    }
+        else {
+        losses++;
+        guessesRemaining -= 1;
+
+        if (guessesRemaining == 0) {
+            alert("You lose!");
+            wins = 0;
+            losses = 0;
+            guessesRemaining = 9;
+        }
+
+        // Display the wins/losses/guesses remaining/guesses made.
+        document.getElementById("wins-text").innerHTML = "Wins: " + wins;
+        document.getElementById("losses-text").innerHTML = "Losses: " + losses;
+        document.getElementById("guesses-remain-text").innerHTML = "Guesses remaining: " + guessesRemaining;
+        document.getElementById("guesses-so-far-text").innerHTML = "Guesses so far: " + userGuess;
+
+    }
 
 };
