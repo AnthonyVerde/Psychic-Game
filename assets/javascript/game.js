@@ -22,18 +22,18 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     var computerGuess = letterChoice[Math.floor(Math.random() * letterChoice.length)];
-    
 
 
     if (userGuess === computerGuess) {
         wins++;
+        alert("You win! You guessed: " + computerGuess )
 
     }
         else {
         losses++;
         guessesRemaining -= 1;
 
-        if (guessesRemaining == 0) {
+        if (guessesRemaining === 0) {
             alert("You lose!");
             wins = 0;
             losses = 0;
@@ -41,10 +41,10 @@ document.onkeyup = function (event) {
         }
 
         // Display the wins/losses/guesses remaining/guesses made.
-        document.getElementById("wins-text").innerHTML = "Wins: " + wins;
-        document.getElementById("losses-text").innerHTML = "Losses: " + losses;
-        document.getElementById("guesses-remain-text").innerHTML = "Guesses remaining: " + guessesRemaining;
-        document.getElementById("guesses-so-far-text").innerHTML = "Guesses so far: " + userGuess;
+        document.getElementById("wins-text").innerHTML = wins;
+        document.getElementById("losses-text").innerHTML = losses;
+        document.getElementById("guesses-remain-text").innerHTML = guessesRemaining;
+        document.getElementById("guesses-so-far-text").innerHTML = userGuess;
 
     }
 

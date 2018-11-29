@@ -1,0 +1,106 @@
+body {
+    background-image: url('../images/cartographer_@2X.png');
+    background-repeat: repeat;
+    font-family: 'Hind Madurai', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+}
+
+.game-header {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 20px;
+}
+
+#instructions {
+    line-height: 24px;
+}
+
+.guess-content-box {
+    padding: 20px;
+    height: 200px;
+    max-width: 100%;
+    font-weight: 700;
+}
+
+#wins-text {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgb(95, 235, 95);
+    margin-top: 20px;
+}
+
+#losses-text {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgb(247, 82, 82);
+    margin-top: 20px;
+}
+
+#guesses-remain-text {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgb(163, 163, 163);
+    margin-top: 20px;
+}
+
+.your-guess-box {
+    width: 100%;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#guesses-so-far-text {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 160px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 575px) {
+
+    .guess-content-box {
+        padding: 10px;
+        height: 65px;
+        max-width: 100%;
+    }
+    
+    #wins-text {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgb(95, 235, 95);
+        margin-top: 10px;
+    }
+    
+    #losses-text {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgb(247, 82, 82);
+        margin-top: 10px;
+    }
+    
+    #guesses-remain-text {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgb(163, 163, 163);
+        margin-top: 10px;
+    }
+}
